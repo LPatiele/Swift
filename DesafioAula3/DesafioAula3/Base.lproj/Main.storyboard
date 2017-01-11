@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Bvx-AB-FFe">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Podcasts-->
+        <scene sceneID="oa7-CJ-bTO">
+            <objects>
+                <tableViewController id="Ju1-Mb-p6s" customClass="PodcastTableViewController" customModule="DesafioAula3" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="119" sectionHeaderHeight="28" sectionFooterHeight="28" id="gNw-MW-bPn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.88399628990980639" green="0.49370710335657997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.85753040021682414" green="0.64126514814069568" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="podcastIdentifier" rowHeight="119" id="zfC-Yo-LHi" customClass="PodcastTableViewCell" customModule="DesafioAula3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="119"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zfC-Yo-LHi" id="fzj-19-L72">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="118"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Vpz-tV-Vma" userLabel="Stack View Cell">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4oc-na-pVh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="KNF-54-Mm8"/>
+                                                        <constraint firstAttribute="height" constant="100" id="MjJ-w7-CkO"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QEX-n2-bWD" userLabel="Stack View Label">
+                                                    <rect key="frame" x="108" y="0.0" width="267" height="100"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRz-CE-gVK">
+                                                            <rect key="frame" x="0.0" y="0.0" width="267" height="71.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hy2-qC-rtU">
+                                                            <rect key="frame" x="0.0" y="79.5" width="267" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Vpz-tV-Vma" secondAttribute="trailing" id="01O-hb-toZ"/>
+                                        <constraint firstItem="Vpz-tV-Vma" firstAttribute="top" secondItem="fzj-19-L72" secondAttribute="top" id="D4d-oq-8E0"/>
+                                        <constraint firstItem="Vpz-tV-Vma" firstAttribute="leading" secondItem="fzj-19-L72" secondAttribute="leading" id="xx4-0g-NZI"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.94177316462879423" green="0.7685185268880711" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="NomeLabel" destination="CRz-CE-gVK" id="onY-YT-au7"/>
+                                    <outlet property="descricaoLabel" destination="Hy2-qC-rtU" id="G4w-jS-maH"/>
+                                    <outlet property="imagem" destination="4oc-na-pVh" id="mt6-eR-cdO"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ju1-Mb-p6s" id="7Rd-tS-0kn"/>
+                            <outlet property="delegate" destination="Ju1-Mb-p6s" id="8Au-Ow-ihG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My Podcasts" id="gV5-72-aeE"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="44B-qa-7jp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1114" y="-539"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="c7b-5U-zzY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bvx-AB-FFe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uDf-1o-3Rg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ju1-Mb-p6s" kind="relationship" relationship="rootViewController" id="yXX-eZ-7vI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CHS-Fj-ONb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60" y="-1226.5367316341831"/>
+        </scene>
+    </scenes>
+</document>
